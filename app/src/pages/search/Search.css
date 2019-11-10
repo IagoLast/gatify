@@ -1,0 +1,40 @@
+.LoadingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white
+}
+
+.Search header {
+    background: var(--color-light-0);
+    opacity: .9;
+    padding: 4px 16px;
+}
+
+.Search nav .Toggle {
+    margin-left: 16px;
+}
+
+.Search .Form input {
+    margin-bottom: 8px;
+}
+
+.Search__Button {
+    max-width: 90px;
+    margin: 8px;
+    border: none;
+    background: transparent;
+    color: var(--color-light-0);
+}
+
+.Search__Menu {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--color-dark-0);
+}
+
+.Search__Items {
+    padding: 0;
+}

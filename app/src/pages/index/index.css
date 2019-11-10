@@ -1,0 +1,29 @@
+.Index {
+    display: flex;
+    flex-direction: column;
+    background: url('https://cdn.dribbble.com/users/1584156/screenshots/4605428/36_9_cats_drbl.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.Index .Form {
+    margin-top: 30%;
+    padding: 16px;
+}
+
+.Index .Form select {
+    margin-bottom: 8px;
+}
+
+.Index .Form button {
+    margin-top: 12px;
+}
+
+.Index .New {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+}

@@ -1,0 +1,94 @@
+.Details header {
+    background: var(--color-light-0);
+    opacity: .9;
+    padding: 4px 16px;
+}
+
+.Details .carousel .slide {
+    background-color: transparent;
+}
+
+.Details .carousel .control-prev.control-arrow {
+    top: 166px;
+    height: 64px;
+    left: 0;
+    width: 64px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 0;
+}
+
+.Details .carousel .control-next.control-arrow {
+    top: 166px;
+    height: 64px;
+    right: 0;
+    width: 64px;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 0;
+}
+
+.Details .control-dots {
+    padding: 0;
+    margin: 0 auto 16px auto;
+}
+
+.Details__Image {
+    width: 100%;
+    height: 400px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.Details .Information {
+    background: white;
+    padding-bottom: 32px;
+}
+
+.Details .Information__Header {
+    padding: 32px;
+}
+
+.Details .Info__Title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Details .Info__Breed {
+    font-size: 12px;
+    margin: 8px 0 0 0;
+    color: var(--color-dark-1);
+}
+
+.Details .Features {
+    padding: 8px 32px;
+    display: flex;
+}
+
+.Details .Features .Feature {
+    margin-right: 8px;
+}
+
+.Details .Info_Description {
+    padding: 8px 32px;
+}
+
+.Details .Info_Contact {
+    margin: 8px 32px;
+    font-weight: bold;
+}
+
+.Details .Info_Contact a {
+    display: inline-block;
+    color: white;
+    background: var(--color-secondary);
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.Details .Feature {
+    width: 84px;
+    height: 84px;
+}

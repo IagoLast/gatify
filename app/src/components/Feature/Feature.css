@@ -1,0 +1,23 @@
+/* FEATURe */
+
+.Feature {
+    background-color: #f8f8f8;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Feature__Key {
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+}
+
+.Feature__Value {
+    font-weight: 800;
+    color: var(--color-dark-1);
+}

@@ -1,0 +1,69 @@
+.Item {
+    overflow: hidden;
+    cursor: pointer;
+    margin: 16px;
+    display: flex;
+    border-radius: 4px;
+    background: white;
+    padding: 0;
+    width: calc(100% - 32px);
+    text-align: left;
+    align-items: initial;
+    border: none;
+}
+
+.Item--highlight {
+    background: yellow;
+}
+
+.Item__ImageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Item__Image {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.Item__Info {
+    position: relative;
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.Item .Info__Title {
+    margin: 4px 8px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-dark-0);
+}
+
+.Item .Info__Extra {
+    display: flex;
+}
+
+.Item .Info__Extra .Feature {
+    width: 48px;
+    height: 48px;
+    margin-right: 4px;
+}
+
+.Item .Info__Extra .Feature__Key {
+    font-size: 14px;
+}
+
+.Item .Info__Extra .Feature__Value {
+    font-size: 8px;
+}

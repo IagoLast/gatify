@@ -1,0 +1,32 @@
+.Drawer {
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-light-1);
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.Drawer.visible {
+    z-index: 1;
+    visibility: initial;
+}
+
+.Drawer section {
+    max-width: 380px;
+}
+
+.Drawer select {
+    margin-bottom: 8px;
+}
+
+@keyframes fade {
+    from {
+        visibility: hidden;
+    }
+}

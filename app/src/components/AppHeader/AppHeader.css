@@ -1,0 +1,30 @@
+.AppHeader {
+    background: var(--color-light-0);
+    height: 54px;
+    display: flex;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AppHeader__LeftButton {
+    cursor: pointer;
+    border: none;
+    background: none;
+    height: 100%;
+}
+
+.AppHeader__User {
+    display: block;
+    border: none;
+    font-size: 24px;
+    width: 40px;
+    color: var(--color-dark-0);
+    text-align: right;
+}
+
+.AppHeader__User img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}

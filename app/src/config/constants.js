@@ -2,7 +2,7 @@ const APP_NAME = 'Gatify';
 
 export const INDEX = {
     TITLE: APP_NAME,
-    DESCRIPTION: 'Adopta un gato cerca de tí.',
+    DESCRIPTION: 'Adopta un gato cerca de ti.',
     NEW_BTN: 'Publica tu anuncio gratis',
 }
 

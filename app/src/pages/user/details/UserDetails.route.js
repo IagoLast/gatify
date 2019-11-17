@@ -59,7 +59,6 @@ export default function UserDetails(props) {
                 <button className="button  UserDetails__DeleteButton" onClick={deleteAccount}> Eliminar Cuenta </button>
             </section>
 
-
         </main >
     );
 }

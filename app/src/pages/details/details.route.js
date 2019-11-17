@@ -37,9 +37,11 @@ export default function DetailsRoute(props) {
         <main className="Details">
             <AppHeader onBack={props.history.goBack} text={item.title} />
 
-            <Carousel showStatus={false} showThumbs={false} showArrows={true}>
-                {item.images.map(src => <span key={src} className="Details__Image" style={{ backgroundImage: `url(${src})` }}></span>)}
-            </Carousel>
+            <section className="Images">
+                <Carousel showStatus={false} showThumbs={false} showArrows={true}>
+                    {item.images.map(src => <span key={src} className="Details__Image" style={{ backgroundImage: `url(${src})` }}></span>)}
+                </Carousel>
+            </section>
 
             <section className="Information">
                 <div className="Information__User">

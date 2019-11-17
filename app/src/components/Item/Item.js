@@ -5,7 +5,6 @@ import './Item.css';
 import utils from '../../services/utils.service';
 
 export default function Item(props) {
-    console.warn(props);
     return (
         <li>
             <button className={props.highlight ? "Item Item--highlight" : "Item"} onClick={() => props.onClick(props.id)}>

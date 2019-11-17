@@ -19,9 +19,9 @@ export default function Items(props) {
 
 
                             <div className="UserDetails__ItemActions">
-                                <button title="Destacar" className="UserDetails__ItemButton" onClick={() => props.onDeleteItem(item.id)}>
+                                {/* <button title="Destacar" className="UserDetails__ItemButton" onClick={() => props.onDeleteItem(item.id)}>
                                     <FontAwesomeIcon color="#171720" icon={faHighlighter} />
-                                </button>
+                                </button> */}
 
                                 <button title="Borrar" className="UserDetails__ItemButton" onClick={() => props.onDeleteItem(item.id)}>
                                     <FontAwesomeIcon color="#171720" icon={faTrashAlt} />

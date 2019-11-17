@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Drawer from '../../components/Drawer/Drawer';
 import Form from '../../components/Form/Form';
 import Item from '../../components/Item/Item';
-import SearchLoading from './components/SearchLoading';
+import SearchLoading from '../../components/LoadingScreen/LoadingScreen';
 import AppHeader from '../../components/AppHeader/AppHeader';
 import useSearch from './useSearch';
 

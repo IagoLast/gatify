@@ -1,8 +1,8 @@
 import React from 'react';
-import animation from './loader.gif';
+import animation from './loader.svg';
 
 export default function Loader(props) {
     return (
-        <img style={{ width: '100%' }} alt="" src={animation} />
+        <img className="Loader" alt="" src={animation} />
     );
 }

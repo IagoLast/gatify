@@ -1,15 +1,15 @@
 const APP_NAME = 'Gatify';
 
-export const NEW = {
+export const INDEX = {
     TITLE: APP_NAME,
-    DESCRIPTION: 'La web lider en adopción de gatos en España',
+    DESCRIPTION: 'Adopta un gato cerca de tí.',
     NEW_BTN: 'Publica tu anuncio gratis',
 }
 
 export const USER = {
     LOGIN: {
         TITLE: APP_NAME,
-        SUBTITLE: 'Crea una cuenta para publicar anuncios gratis.',
+        SUBTITLE: 'Identifícate para publicar anuncios gratis.',
     }
 };
 

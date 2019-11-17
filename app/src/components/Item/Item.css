@@ -13,7 +13,7 @@
 }
 
 .Item--highlight {
-    background: yellow;
+    background: #ffeb3b;
 }
 
 .Item__ImageWrapper {
@@ -26,6 +26,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .Item__Image {
@@ -40,7 +41,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .Item .Info__Title {

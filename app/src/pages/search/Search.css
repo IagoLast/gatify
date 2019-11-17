@@ -1,10 +1,5 @@
-.LoadingScreen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: white
+.Search {
+    animation: fadein .3s;
 }
 
 .Search header {
@@ -37,4 +32,13 @@
 
 .Search__Items {
     padding: 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

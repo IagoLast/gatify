@@ -4,6 +4,10 @@
     padding: 4px 16px;
 }
 
+.Details .Images {
+    height: 400px;
+}
+
 .Details .carousel .slide {
     background-color: transparent;
 }
@@ -46,7 +50,7 @@
 }
 
 .Details .Information__User {
-    background: yellow;
+    background: #ffeb3b;
     padding: 32px;
 }
 

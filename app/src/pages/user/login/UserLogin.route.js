@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { Redirect, Link } from "react-router-dom";
 import * as C from '../../../config/constants';
 import AuthContext from '../../../context/AuthContext';
-import catImg from './cat.jpg';
+import catImg from './cat.jpeg';
 import './Login.css';
 
 
@@ -26,7 +26,7 @@ export default function UserLogin(props) {
                 {C.USER.LOGIN.SUBTITLE}
             </p>
 
-            <img width="348" height="261" className="Login__Image" src={catImg} alt="" />
+            <img width="300" height="300" className="Login__Image" src={catImg} alt="" />
 
             <button className="button Login__GoogleButton" onClick={signIn}> <FontAwesomeIcon icon={faGoogle} />  Entrar con Google </button>
 

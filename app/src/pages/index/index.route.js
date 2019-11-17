@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LocationSelect from '../../components/LocationSelect/LocationSelect';
 import AppHeader from '../../components/AppHeader/AppHeader';
-import { NEW as C } from '../../config/constants';
+import { INDEX as C } from '../../config/constants';
 import queryStringService from '../../services/queryParams.service';
 import './index.css';
 
@@ -22,6 +22,7 @@ export default function IndexRoute(props) {
             <AppHeader text={C.TITLE} />
 
             <div className="Form">
+                <h2> {C.DESCRIPTION} </h2>
                 <LocationSelect id="provincia" type="prov" placeholder="Provincia" onChange={provincia => setState({ ...state, provincia })} />
                 <LocationSelect id="municipio" type="mun" placeholder="Municipio" onChange={municipio => setState({ ...state, municipio })} provincia={state.provincia} />
                 <button className="button" disabled={isDisabled()} onClick={() => search(state)}>Buscar</button>

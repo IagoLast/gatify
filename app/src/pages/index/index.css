@@ -1,15 +1,18 @@
 .Index {
     display: flex;
     flex-direction: column;
-    background: url('https://cdn.dribbble.com/users/1584156/screenshots/4605428/36_9_cats_drbl.jpg');
+    background: url('/img/background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    padding-bottom: 72px;
 }
 
 .Index .Form {
-    margin-top: 30%;
-    padding: 16px;
+    padding: 32px;
+    margin: auto 0;
+    background: white;
+    text-align: center;
 }
 
 .Index .Form select {
@@ -21,6 +24,7 @@
 }
 
 .Index .New {
+    background: white;
     position: absolute;
     bottom: 0;
     left: 0;

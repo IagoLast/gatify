@@ -42,6 +42,5 @@ export default function useSearch(history, locationSearch) {
         return fields;
     }
 
-
     return { state, toggleDrawer, onFiltersUpdated, onItemClick };
 }

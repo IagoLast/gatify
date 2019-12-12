@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './normalize.css';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import * as firebase from "firebase/app";
-
+import "firebase/auth";
 import "firebase/firestore";
 import "firebase/storage";
-import "firebase/auth";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css';
+import './normalize.css';
+import * as serviceWorker from './serviceWorker';
+
 
 const FIREBASE_CONFIG = {
     apiKey: "AIzaSyA9MzbpwwZGC69TjUBWYiHLNe59Ps1qm-I",

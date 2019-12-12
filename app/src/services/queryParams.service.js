@@ -10,5 +10,4 @@ export function buildQueryString(object) {
 }
 
 
-
 export default { buildQueryString };

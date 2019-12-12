@@ -13,8 +13,6 @@ import Buy from './pages/buy/buy.route';
 import About from './pages/about/About.route';
 
 
-
-
 export default function App() {
   return (
     <AuthContext.Provider value={useAuth()}>

@@ -20,7 +20,6 @@ export async function get(filters) {
 
     const querySnapShot = await collection.get();
     return _addIDToQuerySnapShot(querySnapShot);
-
 }
 
 function _addIDToQuerySnapShot(querySnapShot) {

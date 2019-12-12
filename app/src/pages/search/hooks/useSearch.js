@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import apiService from '../../services/api.service';
-import fields from '../../config/search.fields.js';
-import queryStringService from '../../services/queryParams.service';
-
+import apiService from 'services/api.service';
+import fields from 'config/search.fields.js';
+import queryStringService from 'services/queryParams.service';
+import filterService from '../services/filter.service';
 
 export default function useSearch(history, locationSearch) {
     const [state, setState] = useState({
@@ -14,21 +14,11 @@ export default function useSearch(history, locationSearch) {
     });
 
     useEffect(() => {
-        const rawParams = new URLSearchParams(locationSearch);
-        const filters = {};
-        for (const pair of rawParams) {
-            filters[pair[0]] = pair[1];
-        }
-
+        const filters = filterService.getURLParameters(locationSearch);
+        const fields = _getFields(filters);
         setState((s) => ({ ...s, isLoading: true }));
-
         apiService.fetch(filters).then(items => {
-            setState((s) => {
-                fields.forEach(field => {
-                    field.value = filters[field.id];
-                });
-                return ({ filters, items, isLoading: false, isDrawerVisibile: false, fields: s.fields })
-            });
+            setState({ filters, items, isLoading: false, isDrawerVisibile: false, fields });
         });
     }, [locationSearch])
 
@@ -45,6 +35,13 @@ export default function useSearch(history, locationSearch) {
         history.push(`/details/${id}`)
     }
 
+    function _getFields(filters) {
+        fields.forEach(field => {
+            field.value = filters[field.id];
+        });
+        return fields;
+    }
 
-    return [state, toggleDrawer, onFiltersUpdated, onItemClick]
+
+    return { state, toggleDrawer, onFiltersUpdated, onItemClick };
 }

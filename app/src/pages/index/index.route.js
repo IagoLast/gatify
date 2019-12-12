@@ -14,7 +14,7 @@ export default function IndexRoute(props) {
     }
 
     function isDisabled() {
-        return !state.provincia && !state.municipio;
+        return !state.provincia;
     }
 
     return (

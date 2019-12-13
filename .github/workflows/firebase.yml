@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      CI: true
     steps:
       - name: Checkout
         uses: actions/checkout@master

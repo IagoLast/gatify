@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "firebase deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +45,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "@types/jest": "^24.0.23",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1"
+    "enzyme-adapter-react-16": "^1.15.1",
+    "firebase-cli": "^1.2.0"
   }
 }

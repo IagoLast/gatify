@@ -11,11 +11,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Enter app folder
-        run: cd app
       - name: Install Dependencies
+        working-directory: ./app
         run: npm install
       - name: Build
+        working-directory: ./app
         run: npm run build-prod
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master

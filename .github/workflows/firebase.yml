@@ -20,7 +20,11 @@ jobs:
       - name: Build
         working-directory: ./app
         run: npm run build
-      - name: Deploy
-        working-directory: ./app
-        run: npm run deploy
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          working-directory: ./app
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         

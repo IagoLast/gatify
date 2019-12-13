@@ -6,6 +6,7 @@
   --color-primary: #fff2d0;
   --color-secondary: #ff6255;
   --color-error: #ff6255;
+  --color-hightLight: #ffeb3b;
 }
 
 body {
@@ -43,7 +44,21 @@ ul {
 
 /* TODO: Make this classes */
 
-.button, input, select, textarea {
+input, select, textarea {
+  background-color: var(--color-light-0);
+  border: 1px solid var(--color-light-1);
+  color: var(--color-dark-0);
+  border-radius: .25rem;
+  cursor: pointer;
+  display: block;
+  font-size: .875rem;
+  height: 2.5rem;
+  line-height: 1.75rem;
+  padding: .25rem .5rem;
+  width: 100%;
+}
+
+.button {
   background-color: var(--color-light-0);
   border: 1px solid var(--color-light-1);
   color: var(--color-dark-0);
@@ -62,7 +77,7 @@ textarea {
   resize: none;
 }
 
-.button {
+button {
   text-align: center;
 }
 

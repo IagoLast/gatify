@@ -4,9 +4,7 @@ import SearchRoute from './search.route';
 import apiService from 'services/api.service';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-jest.mock('hooks/useAuth', () => {
-    return () => [{}, jest.fn(), jest.fn(), jest.fn().mockReturnValue(true), jest.fn().mockReturnValue(false), jest.fn()];
-});
+jest.mock('hooks/useAuth', () => () => [{}, jest.fn(), jest.fn(), jest.fn().mockReturnValue(true), jest.fn().mockReturnValue(false), jest.fn()]);
 
 describe('<SearchRoute/>', () => {
     let dummyLocation, wrapper;
@@ -31,9 +29,9 @@ describe('<SearchRoute/>', () => {
         });
     });
 
-    describe('when it has items', () => {
+    describe('when it has 2 items', () => {
         beforeEach(async () => {
-            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }]);
+            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
             await act(async () => {
                 wrapper = render(<Router> <SearchRoute location={dummyLocation} /></Router>);
             })
@@ -51,11 +49,26 @@ describe('<SearchRoute/>', () => {
             expect(wrapper.container.querySelector('.Drawer.visible')).toBeNull();
         });
 
+        it('should display a list of 2 Items', () => {
+            expect(wrapper.container.querySelectorAll('.Item').length).toBe(2);
+        });
+
         it('should show the drawer when the filters button is clicked', async () => {
             act(() => {
                 fireEvent.click(wrapper.getByTitle('Filtrar'));
             });
             expect(wrapper.container.querySelector('.Drawer.visible')).toBeVisible();
+        });
+
+        it('should redirect to /details/<id> when an item is clicked', async () => {
+            const dummyHistory = { push: jest.fn() };
+            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
+            await act(async () => {
+                wrapper = render(<Router> <SearchRoute history={dummyHistory} location={dummyLocation} /></Router>);
+            });
+            expect(dummyHistory.push).not.toHaveBeenCalled();
+            fireEvent.click(wrapper.container.querySelector('.Item__Inner'));
+            expect(dummyHistory.push).toHaveBeenCalledWith('/details/0');
         });
 
     })

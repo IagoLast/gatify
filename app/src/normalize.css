@@ -360,3 +360,14 @@ template {
 [hidden] {
     display: none;
 }
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+}

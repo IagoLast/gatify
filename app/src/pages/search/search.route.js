@@ -22,7 +22,7 @@ export default function SearchRoute(props) {
             <AppHeader onBack={() => props.history.push('/')} text={state.items.length + (state.items.length === 1 ? ' resultado' : ' resultados')} />
 
             <div className="Search__Menu">
-                <button title="Filtrar" className="button Search__Button" onClick={() => toggleDrawer(true)}><FontAwesomeIcon icon={faFilter} /> Filtrar </button>
+                <button title="Filtrar" className="Search__Button" onClick={() => toggleDrawer(true)}><FontAwesomeIcon icon={faFilter} /> Filtrar </button>
             </div>
 
             <Drawer visible={state.isDrawerVisibile}>

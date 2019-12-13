@@ -1,0 +1,13 @@
+.Figure {
+    display: block;
+    margin: 0;
+    background-color: var(--color-dark-1);
+    display: flex;
+}
+
+.Figure__Image {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}

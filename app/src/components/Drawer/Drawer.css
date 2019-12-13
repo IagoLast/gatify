@@ -17,10 +17,6 @@
     visibility: initial;
 }
 
-.Drawer section {
-    max-width: 380px;
-}
-
 .Drawer select {
     margin-bottom: 8px;
 }

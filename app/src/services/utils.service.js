@@ -1,8 +1,8 @@
 export function genderToText(value) {
     if (value === 0) {
-        return 'M';
+        return 'Macho';
     }
-    return 'H';
+    return 'Hembra';
 }
 
 

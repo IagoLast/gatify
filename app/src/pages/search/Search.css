@@ -17,6 +17,7 @@
 }
 
 .Search__Button {
+    padding: .3rem;
     max-width: 90px;
     margin: 8px;
     border: none;

@@ -16,7 +16,7 @@ export default function Form(props) {
         <form ref={formRef} onSubmit={_onSubmit} className="Form">
             {props.fields.map(field => <BindedInput key={field.id} state={state} updateField={updateField} {...field} />)}
             <section className="action-btn">
-                <input type="submit" value={props.buttonText} className="btn-secondary"></input>
+                <input type="submit" value={props.buttonText} className="button"></input>
             </section>
         </form>
     );

@@ -1,7 +1,11 @@
 
 import React from 'react';
-import mData from './data/municipios.json';
-import pData from './data/provincias.json';
+import rawMData from './data/municipios.json';
+import rawPData from './data/provincias.json';
+import sort from './sort.js';
+
+const mData = rawMData.sort(sort);
+const pData = rawPData.sort(sort);
 
 export default function LocationSelect(props) {
     switch (props.type) {

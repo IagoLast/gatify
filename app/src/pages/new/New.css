@@ -1,6 +1,10 @@
 .Main {
     display: flex;
     flex-direction: column;
+    background: url('/img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .Main input, .Main select, .Main .button, .Main textarea {
@@ -31,6 +35,7 @@
     overflow: auto;
     max-height: 100%;
     padding-bottom: 54px;
+    background: rgba(230, 230, 230, .9);
 }
 
 .Main .Form .action-btn {
@@ -40,7 +45,7 @@
     left: 0;
     right: 0;
     padding: 16px;
-    background: var(--color-light-1);
+    background: var(--color-light-0);
 }
 
 .Main .Form .action-btn button {

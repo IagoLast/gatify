@@ -1,6 +1,5 @@
 import React from 'react';
-import LocationSelect from '../../components/LocationSelect/LocationSelect';
-
+import LocationSelect from 'components/LocationSelect/LocationSelect';
 
 export default function Input(props) {
     switch (props.type) {

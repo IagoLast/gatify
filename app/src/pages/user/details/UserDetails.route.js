@@ -43,7 +43,7 @@ export default function UserDetails(props) {
 
             <section>
                 <h2> Acciones</h2>
-                <button className="button UserDetails__SignOutButton" onClick={signOut}> Cerrar Sesion </button>
+                <button className="UserDetails__SignOutButton button" onClick={signOut}> Cerrar Sesion </button>
             </section>
 
             <section className="UserDetails__Items">

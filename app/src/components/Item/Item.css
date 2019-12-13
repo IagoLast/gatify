@@ -17,7 +17,7 @@
     background: white;
 }
 
-.Item--highlight {
+.Item__Inner--highlight {
     background: var(--color-hightLight);
 }
 

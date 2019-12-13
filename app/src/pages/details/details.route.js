@@ -34,7 +34,7 @@ export default function DetailsRoute(props) {
                     <div className="Information__User">
                         <h3> Destacar anuncio</h3>
                         <p> Para conseguir mejores resultados puedes destacar tu anuncio. </p>
-                        <button onClick={hightLight} className="button"> Click Aqui para Destacar </button>
+                        <button onClick={e => hightLight(props.match.params.id)} className="button"> Click Aqui para Destacar </button>
                     </div>
                 }
                 <div className="Information__Header">

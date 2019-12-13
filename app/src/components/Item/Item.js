@@ -7,8 +7,8 @@ import './Item.css';
 
 export default function Item(props) {
     return (
-        <li className={props.highlight ? "Item Item--highlight" : "Item"} >
-            <button className="Item__Inner" onClick={() => props.onClick(props.id)}>
+        <li className="Item" >
+            <button className={props.highlight ? "Item__Inner Item__Inner--highlight" : "Item__Inner"} onClick={() => props.onClick(props.id)}>
                 <Figure width="146px" height="146px" src={props.images[0]}/>
                 <div className="Item__Info">
                     <h3 className="Info__Title">{props.title}</h3>

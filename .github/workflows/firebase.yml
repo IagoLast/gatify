@@ -9,6 +9,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
+      PROJECT_PATH: ./app
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       CI: true
     steps:

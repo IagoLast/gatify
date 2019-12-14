@@ -21,6 +21,10 @@
 
 .Index .Form button {
     margin-top: 12px;
+    background: var(--color-secondary);
+    color: var(--color-light-0);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .Index .New {
@@ -30,4 +34,11 @@
     left: 0;
     right: 0;
     padding: 16px;
+}
+
+.Index .New .button {
+    background: var(--color-secondary);
+    color: var(--color-light-0);
+    font-weight: bold;
+    text-transform: uppercase;
 }

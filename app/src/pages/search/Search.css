@@ -32,7 +32,7 @@
 }
 
 .Search__Items {
-    padding: 0;
+    padding: 12px;
 }
 
 @keyframes fadein {

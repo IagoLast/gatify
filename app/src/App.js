@@ -9,7 +9,7 @@ import Searchroute from './pages/search/search.route';
 import UserDetails from './pages/user/details/UserDetails.route';
 import UserLogin from './pages/user/login/UserLogin.route';
 import UserRegister from './pages/user/register/UserRegister';
-import Buy from './pages/buy/buy.route';
+import Payment from './pages/payments/payment.route';
 import About from './pages/about/About.route';
 
 
@@ -24,7 +24,7 @@ export default function App() {
         <Route exact path="/user/register" component={UserRegister} />
         <Route exact path="/user/login" component={UserLogin} />
         <Route exact path="/user/details" component={UserDetails} />
-        <Route exact path="/buy" component={Buy} />
+        <Route exact path="/payment" component={Payment} />
         <Route exact path="/about" component={About} />
       </Router>
     </AuthContext.Provider>

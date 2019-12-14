@@ -1,7 +1,7 @@
 .Item {
     width: 100%;
     height: 146px;
-    margin: 8px auto;
+    margin-bottom: 12px;
     list-style-type: none;
     text-align: left;
     border-radius: 4px;
@@ -14,7 +14,6 @@
     height: 100%;
     display: flex;
     align-items: stretch;
-    background: white;
 }
 
 .Item__Inner--highlight {
@@ -28,6 +27,7 @@
     justify-content: space-between;
     flex-direction: column;
     padding: 16px 24px;
+    overflow: auto;
 }
 
 .Item .Info__Title {

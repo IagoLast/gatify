@@ -50,8 +50,6 @@ export default function UserDetails(props) {
                 <h2> Anuncios </h2>
                 <Link className="UserDetails__NewLink" to="/new"> Publicar anuncio nuevo</Link>
                 <Items items={items} onDeleteItem={deleteItem} />
-
-
             </section>
 
             <section>

@@ -8,7 +8,7 @@ import Feature from 'components/Feature/Feature';
 import utils from 'services/utils.service';
 import './Details.css';
 import useDetails from './hooks/useDetails';
-import { hightLight } from './services/stripe.service';
+import { hightLight } from 'services/payments.service';
 import Figure from 'components/Figure/Figure';
 import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
 

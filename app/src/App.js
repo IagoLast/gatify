@@ -8,7 +8,6 @@ import NewRoute from './pages/new/New.route';
 import Searchroute from './pages/search/search.route';
 import UserDetails from './pages/user/details/UserDetails.route';
 import UserLogin from './pages/user/login/UserLogin.route';
-import UserRegister from './pages/user/register/UserRegister';
 import Payment from './pages/payments/payment.route';
 import About from './pages/about/About.route';
 import NotFound from 'pages/notFound/notFound.route';
@@ -22,7 +21,6 @@ export default function App() {
         <Route exact path="/search" component={Searchroute} />
         <Route exact path="/new" component={NewRoute} />
         <Route exact path="/details/:id" component={DetailsRoute} />
-        <Route exact path="/user/register" component={UserRegister} />
         <Route exact path="/user/login" component={UserLogin} />
         <Route exact path="/user/details" component={UserDetails} />
         <Route exact path="/payment" component={Payment} />

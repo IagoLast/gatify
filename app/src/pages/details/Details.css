@@ -89,6 +89,7 @@
 
 .Details .Info_Description {
     padding: 8px 32px;
+    white-space: pre-wrap;
 }
 
 .Details .Info_Contact {

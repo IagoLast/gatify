@@ -11,12 +11,18 @@ import useDetails from './hooks/useDetails';
 import { hightLight } from 'services/payments.service';
 import Figure from 'components/Figure/Figure';
 import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
+import { Redirect } from "react-router-dom";
+
 
 export default function DetailsRoute(props) {
     const { item } = useDetails(props.match.params.id);
 
-    if (!item) {
+    if (item === null) {
         return <LoadingScreen />;
+    }
+
+    if (item === undefined) {
+        return <Redirect to="/notfound" />
     }
 
     return (
@@ -47,7 +53,7 @@ export default function DetailsRoute(props) {
                     <Feature icon={faMapMarkerAlt} text={item.municipio} />
                 </div>
                 <div className="Info_Description">
-                    <h3> Descripcion: </h3>
+                    <h3>Descripcion:</h3>
                     <p>{item.description} </p>
                 </div>
 

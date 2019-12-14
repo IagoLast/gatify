@@ -14,6 +14,7 @@
     height: 100%;
     display: flex;
     align-items: stretch;
+    background-color: white;
 }
 
 .Item__Inner--highlight {

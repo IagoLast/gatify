@@ -34,7 +34,7 @@ export async function create(item) {
     const promises = [];
 
     item.images.forEach(image => {
-        const ref = firebase.storage().ref(item.phone + image.name)
+        const ref = firebase.storage().ref(`${Date.now()}_${image.name}`)
         promises.push(ref.put(image));
     });
 

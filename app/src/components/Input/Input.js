@@ -30,7 +30,7 @@ function ImageInput(props) {
     return (
         <React.Fragment>
             <label role="button" onKeyPress={e => e.which === 32 && e.target.click()} tabIndex="0" className={props.error ? 'button invalid' : 'button '} htmlFor={props.id}> Añadir Fotos </label>
-            <input required={props.required} id={props.id} name={props.id} type="file" multiple onChange={e => props.onChange(Array.from(e.target.files))} ></input>
+            <input tabIndex="-1" required={props.required} id={props.id} name={props.id} type="file" multiple onChange={e => props.onChange(Array.from(e.target.files))} ></input>
             <Gallery error={props.error} onDelete={image => props.onChange(props.value.filter(e => e !== image))} files={props.value} />
         </React.Fragment>
     );

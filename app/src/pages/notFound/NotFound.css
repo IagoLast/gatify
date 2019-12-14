@@ -1,0 +1,9 @@
+.NotFound {
+    padding: 32px;
+    background: white;
+    text-align: center;
+}
+
+.NotFound a {
+    margin: 48px auto;
+}

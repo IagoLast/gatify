@@ -28,7 +28,7 @@ export default function UserLogin(props) {
 
             <img width="300" height="300" className="Login__Image" src={catImg} alt="" />
 
-            <button className="button Login__GoogleButton" onClick={signIn}> <FontAwesomeIcon icon={faGoogle} />  Entrar con Google </button>
+            <button className="Login__Button button--primary" onClick={signIn}> <FontAwesomeIcon icon={faGoogle} />  Entrar con Google </button>
 
             <Link className="Login__IndexLink" to="/"> Volver al inicio</Link>
         </main >

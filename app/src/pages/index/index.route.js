@@ -19,7 +19,7 @@ export default function IndexRoute(props) {
 
     return (
         <main className="Index">
-            <AppHeader text={C.TITLE} />
+            <AppHeader text={<h1>{C.TITLE}</h1>} />
 
             <div className="Form">
                 <h2> {C.DESCRIPTION} </h2>

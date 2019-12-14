@@ -34,8 +34,8 @@ export default function New(props) {
     function _onSubmit(v) {
         setLoading(true);
         apiService.newItem({ ...v, uid: user.uid })
-            .then(() => {
-                props.history.push('/search')
+            .then(item => {
+                props.history.push(`/details/${item.id}`);
             })
             .catch(() => {
                 alert('No se ha podido publicar tu anuncio.');

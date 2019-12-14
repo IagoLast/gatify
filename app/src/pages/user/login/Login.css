@@ -18,16 +18,12 @@
     margin: auto;
 }
 
-.Login__GoogleButton svg {
-    margin-right: 8px;
+.Login__Button {
+    margin-top: 8px;
 }
 
-.Login__GoogleButton {
-    background: #DB4437;
-    border-color: #DB4437;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
+.Login__Button svg {
+    margin-right: 8px;
 }
 
 .Login__IndexLink {

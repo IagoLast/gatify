@@ -26,7 +26,6 @@ export default function App() {
         <Route exact path="/payment" component={Payment} />
         <Route exact path="/about" component={About} />
         <Route exact path="/notfound" component={NotFound} />
-
       </Router>
     </AuthContext.Provider>
   );

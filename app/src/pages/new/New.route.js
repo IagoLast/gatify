@@ -1,17 +1,16 @@
-import React, { useContext, useState } from 'react';
+import AuthContext from 'context/auth/auth.context';
+import React, { useState, useContext } from 'react';
 import { Redirect } from "react-router-dom";
 import AppHeader from '../../components/AppHeader/AppHeader';
 import Form from '../../components/Form/Form';
 import LoadingScreen from '../../components/LoadingScreen/LoadingScreen';
 import fields from '../../config/new.fields.js';
-import AuthContext from '../../context/AuthContext';
 import apiService from '../../services/api.service';
 import './New.css';
 
-
 export default function New(props) {
     const [isLoading, setLoading] = useState(false);
-    const [user, , , isLoggedIn] = useContext(AuthContext);
+    const { user, isLoggedIn } = useContext(AuthContext);
 
     if (!isLoggedIn()) {
         localStorage.setItem('cat_finder_redirect', '/new');

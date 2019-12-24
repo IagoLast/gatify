@@ -3,20 +3,35 @@ import { render, fireEvent, act } from '@testing-library/react';
 import SearchRoute from './search.route';
 import apiService from 'services/api.service';
 import { BrowserRouter as Router } from 'react-router-dom';
+import AuthContext from 'context/auth/auth.context';
 
-jest.mock('hooks/useAuth', () => () => [{}, jest.fn(), jest.fn(), jest.fn().mockReturnValue(true), jest.fn().mockReturnValue(false), jest.fn()]);
+
 
 describe('<SearchRoute/>', () => {
-    let dummyLocation, wrapper;
+    let dummyLocation, wrapper, dummyAuthContext;
     beforeEach(() => {
         dummyLocation = { search: '' };
+        dummyAuthContext = {
+            user: 'dummy_user',
+            signIn: jest.fn(),
+            signOut: jest.fn(),
+            isLoggedIn: jest.fn(),
+            isLoading: jest.fn(),
+            deleteAccount: jest.fn(),
+        }
     });
 
     describe('when is fetching items', () => {
         beforeEach(async () => {
             apiService.fetch = jest.fn().mockReturnValue(new Promise(jest.fn())); // Keep response pending
             await act(async () => {
-                wrapper = render(<Router> <SearchRoute location={dummyLocation} /></Router>);
+                wrapper = render(
+                    <AuthContext.Provider value={dummyAuthContext}>
+                        <Router>
+                            <SearchRoute location={dummyLocation} />
+                        </Router>
+                    </AuthContext.Provider>
+                );
             })
         });
 
@@ -33,7 +48,13 @@ describe('<SearchRoute/>', () => {
         beforeEach(async () => {
             apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
             await act(async () => {
-                wrapper = render(<Router> <SearchRoute location={dummyLocation} /></Router>);
+                wrapper = wrapper = render(
+                    <AuthContext.Provider value={dummyAuthContext}>
+                        <Router>
+                            <SearchRoute location={dummyLocation} />
+                        </Router>
+                    </AuthContext.Provider>
+                );
             })
         });
 
@@ -64,7 +85,13 @@ describe('<SearchRoute/>', () => {
             const dummyHistory = { push: jest.fn() };
             apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
             await act(async () => {
-                wrapper = render(<Router> <SearchRoute history={dummyHistory} location={dummyLocation} /></Router>);
+                wrapper = render(
+                    <AuthContext.Provider value={dummyAuthContext}>
+                        <Router>
+                            <SearchRoute history={dummyHistory} location={dummyLocation} />
+                        </Router>
+                    </AuthContext.Provider>
+                );
             });
             expect(dummyHistory.push).not.toHaveBeenCalled();
             fireEvent.click(wrapper.container.querySelector('.Item__Inner'));

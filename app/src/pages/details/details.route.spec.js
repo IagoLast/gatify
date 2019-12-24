@@ -1,10 +1,9 @@
+import { act, render } from '@testing-library/react';
 import React from 'react';
-import { render, fireEvent, act } from '@testing-library/react';
-import DetailsRoute from './details.route';
-import apiService from 'services/api.service';
 import { BrowserRouter as Router } from 'react-router-dom';
+import apiService from 'services/api.service';
+import DetailsRoute from './details.route';
 
-jest.mock('hooks/useAuth', () => () => [{}, jest.fn(), jest.fn(), jest.fn().mockReturnValue(true), jest.fn().mockReturnValue(false), jest.fn()]);
 
 describe('<DetailsRoute/>', () => {
     let dummyLocation, wrapper, dummyMatch, dummyHistory;

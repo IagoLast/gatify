@@ -1,19 +1,34 @@
-import * as firebase from 'firebase/app';
+import firebase from 'services/firebase.service';
 
-export function googleLogin() {
-    return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
+
+function onAuthStateChanged(cb) {
+    firebase.auth().onAuthStateChanged(cb);
 }
 
-export function getUser() {
-    return firebase.auth().currentUser;
-}
-
-export function isLoggedIn() {
-    return firebase.auth().currentUser !== null;
-}
-
-export function signOut() {
+function signOut() {
     return firebase.auth().signOut();
 }
 
-export default { googleLogin, getUser, isLoggedIn, signOut };
+function signIn() {
+    return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
+}
+
+function isLoggedIn() {
+    return firebase.auth().currentUser !== null;
+}
+
+function deleteAccount() {
+    const response = window.confirm('Esto borrara totalmente tu cuenta ¿Estas seguro?');
+    if (response) {
+        return firebase.auth().currentUser.delete();
+    }
+}
+
+export default {
+    user: firebase.auth().currentUser,
+    signIn,
+    signOut,
+    isLoggedIn,
+    deleteAccount,
+    onAuthStateChanged
+}

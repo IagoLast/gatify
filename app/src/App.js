@@ -1,21 +1,20 @@
+import AuthProvider from 'context/auth/AuthProvider';
+import NotFound from 'pages/notFound/notFound.route';
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AuthContext from './context/AuthContext';
-import useAuth from './hooks/useAuth';
+import About from './pages/about/About.route';
 import DetailsRoute from './pages/details/details.route';
 import IndexRoute from './pages/index/index.route';
 import NewRoute from './pages/new/New.route';
+import Payment from './pages/payments/payment.route';
 import Searchroute from './pages/search/search.route';
 import UserDetails from './pages/user/details/UserDetails.route';
 import UserLogin from './pages/user/login/UserLogin.route';
-import Payment from './pages/payments/payment.route';
-import About from './pages/about/About.route';
-import NotFound from 'pages/notFound/notFound.route';
 
 
 export default function App() {
   return (
-    <AuthContext.Provider value={useAuth()}>
+    <AuthProvider>
       <Router>
         <Route exact path="/" component={IndexRoute} />
         <Route exact path="/search" component={Searchroute} />
@@ -27,6 +26,6 @@ export default function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/notfound" component={NotFound} />
       </Router>
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }

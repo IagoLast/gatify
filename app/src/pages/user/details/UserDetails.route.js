@@ -2,14 +2,14 @@ import Items from './components/Items';
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import AppHeader from '../../../components/AppHeader/AppHeader';
-import AuthContext from '../../../context/AuthContext';
+import AuthContext from 'context/auth/auth.context';
 
 import apiService from '../../../services/api.service';
 import './UserDetails.css';
 
 export default function UserDetails(props) {
     const [items, setItems] = useState([]);
-    const [user, , signOut, isLoggedIn, , deleteAccount] = useContext(AuthContext);
+    const { user, signOut, isLoggedIn, deleteAccount } = useContext(AuthContext);
 
     useEffect(() => {
         if (user) {

@@ -1,12 +1,11 @@
-import React from 'react';
-import useAuth from 'hooks/useAuth';
+import AuthContext from 'context/auth/auth.context';
+import React, { useContext } from 'react';
 import './AppHeader.css';
 import Avatar from './components/Avatar';
 import LeftButton from './components/LeftButton';
 
-
 export default function AppHeader(props) {
-    const [user, , , isLoggedIn, isLoading,] = useAuth();
+    const { user, isLoggedIn, isLoading } = useContext(AuthContext);
 
     return (
         <header className="AppHeader">

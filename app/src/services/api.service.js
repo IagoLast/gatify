@@ -1,4 +1,4 @@
-import firebaseService from './firebase.service';
+import firebaseService from './documents.service';
 import searchFields from '../config/search.fields';
 
 export async function fetch(query) {

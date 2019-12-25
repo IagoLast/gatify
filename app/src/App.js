@@ -10,7 +10,7 @@ import Payment from './pages/payments/payment.route';
 import Searchroute from './pages/search/search.route';
 import UserDetails from './pages/user/details/UserDetails.route';
 import UserLogin from './pages/user/login/UserLogin.route';
-
+import Admin from './pages/admin/Admin.route';
 
 export default function App() {
   return (
@@ -25,6 +25,7 @@ export default function App() {
         <Route exact path="/payment" component={Payment} />
         <Route exact path="/about" component={About} />
         <Route exact path="/notfound" component={NotFound} />
+        <Route exact path="/admin" component={Admin} />
       </Router>
     </AuthProvider>
   );

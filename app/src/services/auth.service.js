@@ -1,31 +1,32 @@
-import firebase from 'services/firebase.service';
+import firebase from 'firebase/app';
+import app from 'services/firebase.service';
 
 
 function onAuthStateChanged(cb) {
-    firebase.auth().onAuthStateChanged(cb);
+    app.auth().onAuthStateChanged(cb);
 }
 
 function signOut() {
-    return firebase.auth().signOut();
+    return app.auth().signOut();
 }
 
 function signIn() {
-    return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    return app.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
 }
 
 function isLoggedIn() {
-    return firebase.auth().currentUser !== null;
+    return app.auth().currentUser !== null;
 }
 
 function deleteAccount() {
     const response = window.confirm('Esto borrara totalmente tu cuenta ¿Estas seguro?');
     if (response) {
-        return firebase.auth().currentUser.delete();
+        return app.auth().currentUser.delete();
     }
 }
 
 export default {
-    user: firebase.auth().currentUser,
+    user: app.auth().currentUser,
     signIn,
     signOut,
     isLoggedIn,

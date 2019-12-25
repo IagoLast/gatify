@@ -1,8 +1,14 @@
 export function genderToText(value) {
-    if (value === 0) {
-        return 'Macho';
+    switch (value) {
+        case 0:
+        case '0':
+            return 'Macho'
+        case 1:
+        case '1':
+            return 'Hembra';
+        default:
+            return '?';
     }
-    return 'Hembra';
 }
 
 

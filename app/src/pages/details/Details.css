@@ -4,12 +4,16 @@
     padding: 4px 16px;
 }
 
-.Details .Images {
+.Details .Figure {
     height: 400px;
 }
 
 .Details .carousel .slide {
     background-color: transparent;
+}
+
+.Details .carousel .slide img {
+    width: auto!important;
 }
 
 .Details .carousel .control-prev.control-arrow {
@@ -33,15 +37,6 @@
 .Details .control-dots {
     padding: 0;
     margin: 0 auto 16px auto;
-}
-
-.Details__Image {
-    width: 100%;
-    height: 400px;
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 
 .Details .Information {

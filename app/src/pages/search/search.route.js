@@ -31,7 +31,12 @@ export default function SearchRoute(props) {
             </Drawer>
 
             <ul className="Search__Items">
-                {state.items.map((item, i) => <Item onClick={onItemClick} key={item.id} {...item} />)}
+                {
+                    !state.items.length
+                        ? <h2> No se han encontrado resultados</h2>
+                        : state.items.map((item, i) => <Item onClick={onItemClick} key={item.id} {...item} />)
+                }
+
             </ul>
         </main>
     );

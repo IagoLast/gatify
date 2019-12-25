@@ -98,5 +98,24 @@ describe('<SearchRoute/>', () => {
             expect(dummyHistory.push).toHaveBeenCalledWith('/details/0');
         });
 
-    })
+    });
+
+    describe('when there are no items', () => {
+        beforeEach(async () => {
+            apiService.fetch = jest.fn().mockResolvedValue([]);
+            await act(async () => {
+                wrapper = wrapper = render(
+                    <AuthContext.Provider value={dummyAuthContext}>
+                        <Router>
+                            <SearchRoute location={dummyLocation} />
+                        </Router>
+                    </AuthContext.Provider>
+                );
+            })
+        });
+
+        it('should display a no items found message', () => {
+            expect(wrapper.getByText('No se han encontrado resultados')).toBeVisible();
+        });
+    });
 });

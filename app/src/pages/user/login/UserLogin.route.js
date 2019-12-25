@@ -1,7 +1,7 @@
 import { faGoogle } from '@fortawesome//free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useAuth from 'hooks/useAuth';
-import React from 'react';
+import AuthContext from 'context/auth/auth.context';
+import React, { useContext } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import * as C from '../../../config/constants';
 import catImg from './cat.jpeg';
@@ -9,7 +9,7 @@ import './Login.css';
 
 
 export default function UserLogin(props) {
-    const { signIn, isLoggedIn, isLoading} = useAuth();
+    const { signIn, isLoggedIn, isLoading } = useContext(AuthContext);
 
     if (isLoading()) {
         return null;

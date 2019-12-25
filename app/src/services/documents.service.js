@@ -1,4 +1,4 @@
-import firebase from 'services/firebase.service';
+import firebase from './firebase.service';
 
 export async function getByID(id) {
     const documentSnapshot = await firebase.firestore().collection('cats').doc(id).get();
@@ -30,6 +30,7 @@ function _addIDToQuerySnapShot(querySnapShot) {
     });
 }
 
+// Upload and link images to the item
 export async function create(item) {
     const promises = [];
 
@@ -41,6 +42,10 @@ export async function create(item) {
     await Promise.all(promises);
     const images = await Promise.all(promises.map(promise => promise.snapshot.ref.getDownloadURL()));
     item.images = images;
+    return createItem(item);
+}
+
+export async function createItem(item) {
     return firebase.firestore().collection('cats').add(item);
 }
 
@@ -48,4 +53,4 @@ export async function deleteItem(id) {
     return firebase.firestore().collection('cats').doc(id).delete();
 }
 
-export default { get, create, getByID, deleteItem };
+export default { get, create, createItem, getByID, deleteItem };

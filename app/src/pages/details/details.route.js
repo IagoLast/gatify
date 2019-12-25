@@ -30,8 +30,8 @@ export default function DetailsRoute(props) {
             <AppHeader onBack={props.history.goBack} text={item.title} />
 
             <section className="Images">
-                <Carousel showStatus={false} showThumbs={false} showArrows={true}>
-                    {item.images.map(src => <Figure height="400px" key={src} src={src} />)}
+                <Carousel dynamicHeight={false} showStatus={false} showThumbs={false} showArrows={true}>
+                    {item.images.map(src => <Figure key={src} src={src} />)}
                 </Carousel>
             </section>
 
@@ -48,9 +48,9 @@ export default function DetailsRoute(props) {
                     <h2 className="Info__Breed">{item.breed}</h2>
                 </div>
                 <div className="Features">
-                    <Feature icon={faBabyCarriage} text={item.age} />
+                    <Feature icon={faBabyCarriage} text={item.age || '?'} />
                     <Feature icon={faVenusMars} text={utils.genderToText(item.gender)} />
-                    <Feature icon={faMapMarkerAlt} text={item.municipio} />
+                    <Feature icon={faMapMarkerAlt} text={item.provincia || '?'} />
                 </div>
                 <div className="Info_Description">
                     <h3>Descripcion:</h3>

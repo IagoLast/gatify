@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AuthContext = React.createContext({ loading: true, user: null });
+const AuthContext = React.createContext();
 
 AuthContext.displayName = 'AuthContext';
 

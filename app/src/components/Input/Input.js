@@ -40,7 +40,7 @@ function Gallery(props) {
     if (props.error) {
         return (
             <div className="gallery">
-                <p className="error">Es neceario subir alguna foto.</p>
+                <p className="error">Es necesario subir alguna foto.</p>
             </div>
         );
     }
@@ -48,6 +48,18 @@ function Gallery(props) {
     return (
         <div className="gallery">
             {props.files.map(file => {
+                // file is a String
+                if (typeof file === 'string') {
+                    return (
+                        <figure key={file} >
+                            <img alt="" src={file} />
+                            <figcaption>
+                                <button className="button" onClick={() => props.onDelete(file)} > Quitar foto </button>
+                            </figcaption>
+                        </figure>
+                    );
+                }
+                // File is a File
                 return (
                     <figure key={window.URL.createObjectURL(file)} >
                         <img alt={file.name} src={window.URL.createObjectURL(file)} />

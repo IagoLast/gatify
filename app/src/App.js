@@ -11,6 +11,7 @@ import Searchroute from './pages/search/search.route';
 import UserDetails from './pages/user/details/UserDetails.route';
 import UserLogin from './pages/user/login/UserLogin.route';
 import Admin from './pages/admin/Admin.route';
+import Edit from './pages/edit/Edit.route';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/notfound" component={NotFound} />
         <Route exact path="/admin" component={Admin} />
+        <Route exact path="/edit/:id" component={Edit} />
       </Router>
     </AuthProvider>
   );

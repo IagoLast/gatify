@@ -33,4 +33,8 @@ export async function deleteItem(id) {
     return firebaseService.deleteItem(id);
 }
 
-export default { fetch, newItem: createItem, getByID, deleteItem };
+export async function editItem(item) {
+    return firebaseService.editItem(item);
+}
+
+export default { fetch, newItem: createItem, getByID, deleteItem, editItem };

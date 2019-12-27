@@ -53,4 +53,8 @@ export async function deleteItem(id) {
     return firebase.firestore().collection('cats').doc(id).delete();
 }
 
-export default { get, create, createItem, getByID, deleteItem };
+export async function editItem(item) {
+    return firebase.firestore().collection('cats').doc(item.id).update(item);
+}
+
+export default { get, create, createItem, getByID, deleteItem, editItem };

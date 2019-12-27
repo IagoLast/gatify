@@ -7,7 +7,7 @@ export function genderToText(value) {
         case '1':
             return 'Hembra';
         default:
-            return '?';
+            return;
     }
 }
 

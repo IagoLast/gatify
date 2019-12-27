@@ -24,7 +24,7 @@ export default function useAuth() {
     }
 
     function isLoggedIn() {
-        return state.user !== null;
+        return !!state.user;
     }
 
     function isLoading() {

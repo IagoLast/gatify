@@ -1,8 +1,7 @@
-import { faBabyCarriage, faMapMarkerAlt, faPaw, faVenusMars } from '@fortawesome/free-solid-svg-icons';
 import Figure from 'components/Figure/Figure';
 import React, { useEffect, useState } from 'react';
+import Feature from './components/Feature';
 import utils from 'services/utils.service';
-import Feature from 'components/Feature/Feature';
 import './Item.css';
 
 export default function Item(props) {
@@ -14,7 +13,6 @@ export default function Item(props) {
         });
     });
 
-    const size = isMobile ? 44 : 58;
     const padding = isMobile ? '16px 12px' : '18px';
 
     return (
@@ -24,10 +22,10 @@ export default function Item(props) {
                 <div style={{ padding }} className="Item__Info">
                     <h3 className="Info__Title">{props.title}</h3>
                     <div className="Info__Extra">
-                        <Feature size={size} icon={faPaw} text={props.breed || '?'} />
-                        <Feature size={size} icon={faBabyCarriage} text={props.age || '?'} />
-                        <Feature size={size} icon={faVenusMars} text={utils.genderToText(props.gender)} />
-                        <Feature size={size} icon={faMapMarkerAlt} text={props.provincia || '?'} />
+                        <Feature k="Fecha" v="Ayer" />
+                        <Feature k="Género" v={utils.genderToText(props.gender)} />
+                        <Feature k="Edad" v={props.age} />
+                        <Feature k="Raza" v={props.breed} />
                     </div>
                 </div>
             </button>

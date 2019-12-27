@@ -25,16 +25,28 @@
     width: calc(100% - 146px);
     text-align: left;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-direction: column;
     overflow: auto;
 }
 
 .Item .Info__Title {
     margin: 0;
+    font-size: 1rem;
 }
 
 .Item .Info__Extra {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    margin: 12px 1px;
+}
+
+.Item .Info__Feature {
+    font-weight: 100;
+    font-size: small;
+}
+
+.Item .Info__FeatureKey {
+    font-weight: 600;
+    color: var(--color-secondary);
 }

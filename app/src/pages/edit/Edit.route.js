@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from "react-router-dom";
 import AppHeader from '../../components/AppHeader/AppHeader';
 import Form from '../../components/Form/Form';
-import LoadingScreen from '../../components/LoadingScreen/LoadingScreen';
+import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
 import './Edit.css';
 import useEdit from './useEdit';
 
@@ -23,7 +23,7 @@ export default function Edit(props) {
     }
 
     return (
-        <main className="Edit">
+        <main data-testid="page-edit" className="Edit">
             <AppHeader onBack={props.history.goBack} text="Editar" />
             <Form onSubmit={v => editItem(v, props.history)} fields={fields} buttonText="Editar Anuncio" />
         </main>

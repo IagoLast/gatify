@@ -42,7 +42,7 @@ export async function create(item) {
     await Promise.all(promises);
     const images = await Promise.all(promises.map(promise => promise.snapshot.ref.getDownloadURL()));
     item.images = images;
-    item.created = firebase.firestore.Timestamp.now();
+    item.created = firebase.Timestamp.now();
     return createItem(item);
 }
 

@@ -20,7 +20,7 @@ export default function UserLogin(props) {
     }
 
     return (
-        <main className="Login">
+        <main data-testid="page-login" className="Login">
             <h1 className="Login__Title"> {C.USER.LOGIN.TITLE} </h1>
             <p className="Login__Subtitle">
                 {C.USER.LOGIN.SUBTITLE}

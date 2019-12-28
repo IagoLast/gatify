@@ -84,6 +84,5 @@ describe('<EditRoute/>', () => {
             );
             expect(wrapper.queryByText('Cargando')).toBeVisible();
         });
-
     });
 });

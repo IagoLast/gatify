@@ -11,7 +11,6 @@ const FIREBASE_CONFIG = {
 };
 
 const app = firebase.initializeApp(FIREBASE_CONFIG);
-app.Timestamp = firebase.firestore.Timestamp;
 
 
 export default app;

@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
 import documentService from 'services/documents.service';
+import * as firebase from "firebase/app";
 
-export default function DetailsRoute() {
+
+export default function AdminRoute() {
 
     const [value, setValue] = useState('');
     const [provincia, setProvincia] = useState('36');
@@ -11,6 +13,7 @@ export default function DetailsRoute() {
         const items = JSON.parse(value);
         items.forEach(item => {
             item.provincia = provincia;
+            item.created = firebase.firestore.Timestamp.now();
             documentService.createItem(item);
         });
     }

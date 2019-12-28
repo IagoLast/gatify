@@ -4,6 +4,8 @@
     margin-bottom: 12px;
     list-style-type: none;
     text-align: left;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .Item__Inner {
@@ -13,7 +15,6 @@
     display: flex;
     align-items: stretch;
     background-color: white;
-    border-radius: 4px;
 }
 
 .Item__Inner--highlight {
@@ -25,7 +26,7 @@
     width: calc(100% - 146px);
     text-align: left;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-direction: column;
     overflow: auto;
 }
@@ -35,10 +36,16 @@
     font-size: 1rem;
 }
 
+.Item .Info__SubTitle {
+    display: block;
+    margin: 4px 0;
+    font-size: .9rem;
+}
+
 .Item .Info__Extra {
     display: flex;
-    flex-direction: column;
-    margin: 12px 1px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .Item .Info__Feature {

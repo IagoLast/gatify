@@ -46,7 +46,7 @@ describe('<SearchRoute/>', () => {
 
     describe('when it has 2 items', () => {
         beforeEach(async () => {
-            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
+            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'], created: {} }, { id: 1, images: ['image_1'], created: {} }]);
             await act(async () => {
                 wrapper = wrapper = render(
                     <AuthContext.Provider value={dummyAuthContext}>
@@ -83,7 +83,7 @@ describe('<SearchRoute/>', () => {
 
         it('should redirect to /details/<id> when an item is clicked', async () => {
             const dummyHistory = { push: jest.fn() };
-            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'] }, { id: 1, images: ['image_1'] }]);
+            apiService.fetch = jest.fn().mockResolvedValue([{ id: 0, images: ['image_0'], created: {} }, { id: 1, images: ['image_1'], created: {} }]);
             await act(async () => {
                 wrapper = render(
                     <AuthContext.Provider value={dummyAuthContext}>

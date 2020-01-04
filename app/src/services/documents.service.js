@@ -1,5 +1,4 @@
 import firebase from './firebase.service';
-import { firestore } from "firebase/app";
 
 
 export async function getByID(id) {
@@ -44,7 +43,7 @@ export async function create(item) {
     await Promise.all(promises);
     const images = await Promise.all(promises.map(promise => promise.snapshot.ref.getDownloadURL()));
     item.images = images;
-    item.created = firestore.Timestamp.now();
+    item.dateCreated = new Date();
     return createItem(item);
 }
 

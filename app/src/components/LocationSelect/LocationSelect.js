@@ -29,9 +29,9 @@ export default function LocationSelect(props) {
 }
 
 function ProvinciasOption(props) {
-    return pData.map(data => <option key={data.id} value={data.id}>{data.nm}</option>)
+    return pData.map(data => <option key={data.k} value={data.k}>{data.v}</option>)
 }
 
 function Municipios(props) {
-    return mData.filter(data => data.id.startsWith(props.provincia)).map(data => <option key={data.id} value={data.id}>{data.nm}</option>)
+    return mData.filter(data => data.k.startsWith(props.provincia)).map(data => <option key={data.k} value={data.k}>{data.v}</option>)
 }

@@ -22,7 +22,7 @@ export default function Item(props) {
                 <div style={{ padding }} className="Item__Info">
                     <div>
                         <h3 className="Info__Title">{props.title}</h3>
-                        <span className="Info__SubTitle">{timeService.format(props.created.seconds * 1000)}</span>
+                        <span className="Info__SubTitle">{timeService.format(props.dateCreated)}</span>
                     </div>
                     <div className="Info__Extra">
                         <Feature k="Género" v={utils.genderToText(props.gender)} />

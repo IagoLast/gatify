@@ -1,210 +1,210 @@
 [
     {
-        "id": "04",
-        "nm": "Almería"
+        "k": "04",
+        "v": "Almería"
     },
     {
-        "id": "11",
-        "nm": "Cádiz"
+        "k": "11",
+        "v": "Cádiz"
     },
     {
-        "id": "14",
-        "nm": "Córdoba"
+        "k": "14",
+        "v": "Córdoba"
     },
     {
-        "id": "18",
-        "nm": "Granada"
+        "k": "18",
+        "v": "Granada"
     },
     {
-        "id": "21",
-        "nm": "Huelva"
+        "k": "21",
+        "v": "Huelva"
     },
     {
-        "id": "23",
-        "nm": "Jaén"
+        "k": "23",
+        "v": "Jaén"
     },
     {
-        "id": "29",
-        "nm": "Málaga"
+        "k": "29",
+        "v": "Málaga"
     },
     {
-        "id": "41",
-        "nm": "Sevilla"
+        "k": "41",
+        "v": "Sevilla"
     },
     {
-        "id": "22",
-        "nm": "Huesca"
+        "k": "22",
+        "v": "Huesca"
     },
     {
-        "id": "44",
-        "nm": "Teruel"
+        "k": "44",
+        "v": "Teruel"
     },
     {
-        "id": "50",
-        "nm": "Zaragoza"
+        "k": "50",
+        "v": "Zaragoza"
     },
     {
-        "id": "33",
-        "nm": "Asturias"
+        "k": "33",
+        "v": "Asturias"
     },
     {
-        "id": "07",
-        "nm": "Balears, Illes"
+        "k": "07",
+        "v": "Balears, Illes"
     },
     {
-        "id": "35",
-        "nm": "Palmas, Las"
+        "k": "35",
+        "v": "Palmas, Las"
     },
     {
-        "id": "38",
-        "nm": "Santa Cruz de Tenerife"
+        "k": "38",
+        "v": "Santa Cruz de Tenerife"
     },
     {
-        "id": "39",
-        "nm": "Cantabria"
+        "k": "39",
+        "v": "Cantabria"
     },
     {
-        "id": "05",
-        "nm": "Avila"
+        "k": "05",
+        "v": "Avila"
     },
     {
-        "id": "09",
-        "nm": "Burgos"
+        "k": "09",
+        "v": "Burgos"
     },
     {
-        "id": "24",
-        "nm": "León"
+        "k": "24",
+        "v": "León"
     },
     {
-        "id": "34",
-        "nm": "Palencia"
+        "k": "34",
+        "v": "Palencia"
     },
     {
-        "id": "37",
-        "nm": "Salamanca"
+        "k": "37",
+        "v": "Salamanca"
     },
     {
-        "id": "40",
-        "nm": "Segovia"
+        "k": "40",
+        "v": "Segovia"
     },
     {
-        "id": "42",
-        "nm": "Soria"
+        "k": "42",
+        "v": "Soria"
     },
     {
-        "id": "47",
-        "nm": "Valladolid"
+        "k": "47",
+        "v": "Valladolid"
     },
     {
-        "id": "49",
-        "nm": "Zamora"
+        "k": "49",
+        "v": "Zamora"
     },
     {
-        "id": "02",
-        "nm": "Albacete"
+        "k": "02",
+        "v": "Albacete"
     },
     {
-        "id": "13",
-        "nm": "Ciudad Real"
+        "k": "13",
+        "v": "Ciudad Real"
     },
     {
-        "id": "16",
-        "nm": "Cuenca"
+        "k": "16",
+        "v": "Cuenca"
     },
     {
-        "id": "19",
-        "nm": "Guadalajara"
+        "k": "19",
+        "v": "Guadalajara"
     },
     {
-        "id": "45",
-        "nm": "Toledo"
+        "k": "45",
+        "v": "Toledo"
     },
     {
-        "id": "08",
-        "nm": "Barcelona"
+        "k": "08",
+        "v": "Barcelona"
     },
     {
-        "id": "17",
-        "nm": "Girona"
+        "k": "17",
+        "v": "Girona"
     },
     {
-        "id": "25",
-        "nm": "Lleida"
+        "k": "25",
+        "v": "Lleida"
     },
     {
-        "id": "43",
-        "nm": "Tarragona"
+        "k": "43",
+        "v": "Tarragona"
     },
     {
-        "id": "03",
-        "nm": "Alicante/Alacant"
+        "k": "03",
+        "v": "Alicante/Alacant"
     },
     {
-        "id": "12",
-        "nm": "Castellón/Castelló"
+        "k": "12",
+        "v": "Castellón/Castelló"
     },
     {
-        "id": "46",
-        "nm": "Valencia/València"
+        "k": "46",
+        "v": "Valencia/València"
     },
     {
-        "id": "06",
-        "nm": "Badajoz"
+        "k": "06",
+        "v": "Badajoz"
     },
     {
-        "id": "10",
-        "nm": "Cáceres"
+        "k": "10",
+        "v": "Cáceres"
     },
     {
-        "id": "15",
-        "nm": "Coruña, A"
+        "k": "15",
+        "v": "Coruña, A"
     },
     {
-        "id": "27",
-        "nm": "Lugo"
+        "k": "27",
+        "v": "Lugo"
     },
     {
-        "id": "32",
-        "nm": "Ourense"
+        "k": "32",
+        "v": "Ourense"
     },
     {
-        "id": "36",
-        "nm": "Pontevedra"
+        "k": "36",
+        "v": "Pontevedra"
     },
     {
-        "id": "28",
-        "nm": "Madrid"
+        "k": "28",
+        "v": "Madrid"
     },
     {
-        "id": "30",
-        "nm": "Murcia"
+        "k": "30",
+        "v": "Murcia"
     },
     {
-        "id": "31",
-        "nm": "Navarra"
+        "k": "31",
+        "v": "Navarra"
     },
     {
-        "id": "01",
-        "nm": "Araba/Álava"
+        "k": "01",
+        "v": "Araba/Álava"
     },
     {
-        "id": "48",
-        "nm": "Bizkaia"
+        "k": "48",
+        "v": "Bizkaia"
     },
     {
-        "id": "20",
-        "nm": "Gipuzkoa"
+        "k": "20",
+        "v": "Gipuzkoa"
     },
     {
-        "id": "26",
-        "nm": "Rioja, La"
+        "k": "26",
+        "v": "Rioja, La"
     },
     {
-        "id": "51",
-        "nm": "Ceuta"
+        "k": "51",
+        "v": "Ceuta"
     },
     {
-        "id": "52",
-        "nm": "Melilla"
+        "k": "52",
+        "v": "Melilla"
     }
 ]

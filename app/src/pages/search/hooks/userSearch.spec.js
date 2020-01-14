@@ -18,6 +18,5 @@ describe('useSearch', () => {
 
         expect(result.current.state.items).toEqual(['dummy_item']);
         expect(result.current.state.isLoading).toBeFalsy();
-        expect(false).toEqual(true);
     });
 });

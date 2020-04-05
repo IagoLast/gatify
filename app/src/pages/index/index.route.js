@@ -1,21 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import LocationSelect from '../../components/LocationSelect/LocationSelect';
 import AppHeader from '../../components/AppHeader/AppHeader';
 import { INDEX as C } from '../../config/constants';
-import queryStringService from '../../services/queryParams.service';
+import useIndex from './useIndex';
 import './index.css';
 
-export default function IndexRoute(props) {
-    const [state, setState] = useState({ provincia: null, municipio: null });
-
-
-    function search(params) {
-        props.history.push(`/search${queryStringService.buildQueryString(params)}`);
-    }
-
-    function isDisabled() {
-        return !state.provincia;
-    }
+export default function IndexRoute() {
+    const { state, search, isDisabled, onProvChanged, onMunChanged, navigateToNew } = useIndex();
 
     return (
         <main className="Index">
@@ -23,13 +14,13 @@ export default function IndexRoute(props) {
 
             <div className="Form">
                 <h2> {C.DESCRIPTION} </h2>
-                <LocationSelect id="provincia" type="prov" placeholder="Provincia" onChange={provincia => setState({ ...state, provincia })} />
-                <LocationSelect id="municipio" type="mun" placeholder="Municipio" onChange={municipio => setState({ ...state, municipio })} provincia={state.provincia} />
-                <button className="button" disabled={isDisabled()} onClick={() => search(state)}>Buscar</button>
+                <LocationSelect id="provincia" type="prov" placeholder="Provincia" onChange={onProvChanged} />
+                <LocationSelect id="municipio" type="mun" placeholder="Municipio" onChange={onMunChanged} provincia={state.provincia} />
+                <button data-testid="btn-search" className="button" disabled={isDisabled()} onClick={search}>Buscar</button>
             </div>
 
             <aside className="New">
-                <button className="button" onClick={() => props.history.push(`/new`)}>{C.NEW_BTN}</button>
+                <button className="button" onClick={navigateToNew}>{C.NEW_BTN}</button>
             </aside>
         </main>
     );

@@ -1,24 +1,17 @@
-import { act, render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import apiService from 'services/api.service';
 import DetailsRoute from './details.route';
 
 
 describe('<DetailsRoute/>', () => {
-    let dummyLocation, wrapper, dummyMatch, dummyHistory;
-    beforeEach(() => {
-        dummyLocation = { search: '' };
-        dummyMatch = { params: { id: 'dummy_id' } };
-        dummyHistory = { goBack: jest.fn() };
-    });
+    let wrapper;
 
     describe('when is downloading data', () => {
-        beforeEach(async () => {
-            apiService.getByID = jest.fn().mockReturnValue(new Promise(jest.fn())); // Keep response pending
-            await act(async () => {
-                wrapper = render(<Router> <DetailsRoute history={dummyHistory} match={dummyMatch} location={dummyLocation} /></Router>);
-            })
+        beforeEach(() => {
+            apiService.getByID = jest.fn().mockResolvedValue(null); // Null means promise is still loading
+            wrapper = render(<DetailsRoute />, { wrapper: MemoryRouter });
         });
 
         it('should display a loading spinner', () => {
@@ -27,8 +20,38 @@ describe('<DetailsRoute/>', () => {
     });
 
     describe('when has finished loading', () => {
-        it('should display the item images', () => { });
-        it('should display the item description', () => { });
-        it('should display the item contact', () => { });
+        beforeEach(async () => {
+            apiService.getByID = jest.fn().mockResolvedValue(dummyItem);
+            await act(async () => {
+                wrapper = render(<DetailsRoute />, { wrapper: MemoryRouter });
+            });
+        });
+
+        it('should display the item images', () => {
+            expect(wrapper.container.querySelectorAll('img').length).toBe(2);
+        });
+
+        it('should display the item description', () => {
+            expect(wrapper.queryByTestId('text-description')).toHaveTextContent('dummy_description');
+        });
+
+        it('should display the item contact', () => {
+            expect(wrapper.queryByTestId('link-contact')).toHaveTextContent('dummy_phone');
+        });
     });
 });
+
+
+const dummyItem = {
+    breed: 'dummy_breed',
+    description: 'dummy_description',
+    gender: 'dummy_gender',
+    highlight: false,
+    provincia: 'dummy_provincia',
+    title: 'dummy_title',
+    images: [
+        'dummy_image_0',
+        'dummy_image_1',
+    ],
+    phone: 'dummy_phone',
+};

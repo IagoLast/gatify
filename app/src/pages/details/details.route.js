@@ -1,21 +1,20 @@
 
 import { faBabyCarriage, faMapMarkerAlt, faVenusMars } from '@fortawesome/free-solid-svg-icons';
+import AppHeader from 'components/AppHeader/AppHeader';
+import Feature from 'components/Feature/Feature';
+import Figure from 'components/Figure/Figure';
+import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import AppHeader from 'components/AppHeader/AppHeader';
-import Feature from 'components/Feature/Feature';
+import { Redirect } from "react-router-dom";
 import utils from 'services/utils.service';
 import './Details.css';
-import useDetails from './hooks/useDetails';
-import { hightLight } from 'services/payments.service';
-import Figure from 'components/Figure/Figure';
-import LoadingScreen from 'components/LoadingScreen/LoadingScreen';
-import { Redirect } from "react-router-dom";
+import useDetails from './useDetails';
 
 
-export default function DetailsRoute(props) {
-    const { item } = useDetails(props.match.params.id);
+export default function DetailsRoute() {
+    const { item, highlight, goBack } = useDetails();
 
     if (item === null) {
         return <LoadingScreen />;
@@ -27,7 +26,7 @@ export default function DetailsRoute(props) {
 
     return (
         <main className="Details">
-            <AppHeader onBack={props.history.goBack} text={item.title} />
+            <AppHeader onBack={goBack} text={item.title} />
 
             <section className="Images">
                 <Carousel dynamicHeight={false} showStatus={false} showThumbs={false} showArrows={true}>
@@ -40,7 +39,7 @@ export default function DetailsRoute(props) {
                     <div className="Information__User">
                         <h3> Destacar anuncio</h3>
                         <p> Para conseguir mejores resultados puedes destacar tu anuncio. </p>
-                        <button onClick={e => hightLight(props.match.params.id)} className="button"> Click Aqui para Destacar </button>
+                        <button onClick={highlight} className="button"> Click Aqui para Destacar </button>
                     </div>
                 }
                 <div className="Information__Header">
@@ -54,12 +53,12 @@ export default function DetailsRoute(props) {
                 </div>
                 <div className="Info_Description">
                     <h3>Descripcion:</h3>
-                    <p>{item.description} </p>
+                    <p data-testid="text-description">{item.description} </p>
                 </div>
 
                 <div className="Info_Contact">
                     <h3> Contacto: </h3>
-                    <a href={`tel:${item.phone}`}>{item.phone}</a>
+                    <a data-testid="link-contact" href={`tel:${item.phone}`}>{item.phone}</a>
                 </div>
             </section>
         </main>

@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-import app from 'services/firebase.service';
+import app from 'services/firebaseApp.service';
 
 
 function onAuthStateChanged(cb) {

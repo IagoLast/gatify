@@ -1,4 +1,4 @@
-import firebase from './firebase.service';
+import firebase from './firebaseApp.service';
 
 
 export async function getByID(id) {
